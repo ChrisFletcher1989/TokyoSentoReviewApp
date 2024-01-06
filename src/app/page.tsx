@@ -1,4 +1,4 @@
-import SearchKu from "./components/searchKu";
+import SearchKu from "../components/searchKu";
 
 //APP SKELETON
 //Add components for each 区 and allow users to selected 区s to search by
