@@ -1,7 +1,7 @@
 export default function SearchKu() {
   return (
     <div>
-      <p className="text-center">Search by Tokyo Ward:</p>
+      <p className="text-red-950 text-center">Search by Tokyo Ward:</p>
       <form className="text-base font-semibold leading-7 text-gray-900 text-center">
         <input type="checkbox" name="adachi" id="adachi"></input>
         <label className="mr-4">Adachi</label>
