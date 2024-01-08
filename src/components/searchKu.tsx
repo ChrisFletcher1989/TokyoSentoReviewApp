@@ -1,9 +1,23 @@
+import store from "../app/redux/store";
+import AdachiSentos from "./AdachiSentos/AdachiSentos";
+import { adachiSelected } from "../app/redux/features/区s/adachi";
+
 export default function SearchKu() {
+  const handleAdachiSelected = (event: React.ChangeEvent<HTMLInputElement>) => {
+    store.dispatch(adachiSelected());
+    if (event.target.checked) {
+    }
+  };
   return (
     <div>
       <p className="text-red-950 text-center">Search by Tokyo Ward:</p>
       <form className="text-base font-semibold leading-7 text-gray-900 text-center">
-        <input type="checkbox" name="adachi" id="adachi"></input>
+        <input
+          type="checkbox"
+          name="adachi"
+          id="adachi"
+          onChange={handleAdachiSelected}
+        ></input>
         <label className="mr-4">Adachi</label>
         <input type="checkbox" name="arakawa" id="arakawa"></input>
         <label className="mr-4">Arakawa</label>

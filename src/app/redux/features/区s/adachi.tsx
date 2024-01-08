@@ -3,16 +3,15 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   adachiSelected: false,
 };
-//ACTIONS ARE AUTOMATICALLY MADE WHEN REDUCERS ARE ADDED TO THE OBJECT USING createSlice TOOLKIT
 const adachiSlice = createSlice({
   name: "adachi",
   initialState: initialState,
   reducers: {
-    selected: (state) => {
+    adachiSelected: (state) => {
       state.adachiSelected = true;
     },
   },
 });
 
 export const adachiReducer = adachiSlice.reducer;
-export const { selected } = adachiSlice.actions;
+export const { adachiSelected } = adachiSlice.actions;
