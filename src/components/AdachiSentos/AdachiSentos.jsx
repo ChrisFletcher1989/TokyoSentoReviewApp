@@ -21,6 +21,7 @@ const adachiDB = [
 
 function AdachiSentos() {
   const dispatch = useDispatch();
+  //   const isAdachiSelected = useSelector(adachiSelected);
 
   useEffect(() => {
     if (adachiSelected === true) {

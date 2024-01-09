@@ -1,9 +1,12 @@
 "use client";
+import { useSelector, useDispatch } from "react-redux";
 
 import store from "../app/redux/store";
 import { adachiSelected } from "../app/redux/features/区s/adachi";
 import AdachiSentos from "./AdachiSentos/AdachiSentos";
 function SearchKu() {
+  const dispatch = useDispatch();
+
   return (
     <div>
       <p className="text-red-950 text-center">Search by Tokyo Ward:</p>
@@ -13,7 +16,7 @@ function SearchKu() {
           name="adachi"
           id="adachi"
           onChange={() => {
-            store.dispatch(adachiSelected());
+            dispatch(adachiSelected());
           }}
         ></input>
         <label className="mr-4">Adachi</label>
