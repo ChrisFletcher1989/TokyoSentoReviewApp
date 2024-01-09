@@ -1,13 +1,9 @@
-import store from "../app/redux/store";
-import AdachiSentos from "./AdachiSentos/AdachiSentos";
-import { adachiSelected } from "../app/redux/features/区s/adachi";
+"use client";
 
-export default function SearchKu() {
-  const handleAdachiSelected = (event: React.ChangeEvent<HTMLInputElement>) => {
-    store.dispatch(adachiSelected());
-    if (event.target.checked) {
-    }
-  };
+import store from "../app/redux/store";
+import { adachiSelected } from "../app/redux/features/区s/adachi";
+import AdachiSentos from "./AdachiSentos/AdachiSentos";
+function SearchKu() {
   return (
     <div>
       <p className="text-red-950 text-center">Search by Tokyo Ward:</p>
@@ -16,7 +12,9 @@ export default function SearchKu() {
           type="checkbox"
           name="adachi"
           id="adachi"
-          onChange={handleAdachiSelected}
+          onChange={() => {
+            store.dispatch(adachiSelected());
+          }}
         ></input>
         <label className="mr-4">Adachi</label>
         <input type="checkbox" name="arakawa" id="arakawa"></input>
@@ -64,6 +62,8 @@ export default function SearchKu() {
         <input type="checkbox" name="toshima" id="toshima"></input>
         <label className="mr-4">Toshima</label>
       </form>
+      <AdachiSentos />
     </div>
   );
 }
+export default SearchKu;
