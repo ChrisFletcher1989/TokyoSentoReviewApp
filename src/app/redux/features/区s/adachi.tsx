@@ -1,3 +1,4 @@
+"use client";
 import { createSlice } from "@reduxjs/toolkit";
 //CREATE INITIAL STATE
 const initialState = {
@@ -13,5 +14,5 @@ const adachiSlice = createSlice({
   },
 });
 
-export const adachiReducer = adachiSlice.reducer;
 export const { adachiSelected } = adachiSlice.actions;
+export const adachiReducer = adachiSlice.reducer;

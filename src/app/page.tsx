@@ -2,6 +2,7 @@
 import SearchKu from "../components/searchKu";
 import { Provider } from "react-redux";
 import store from "./redux/store";
+import { Providers } from "../app/redux/provider";
 
 //APP SKELETON
 //Add components for each 区 and allow users to selected 区s to search by
@@ -18,7 +19,7 @@ import store from "./redux/store";
 export default function Home() {
   return (
     <div>
-      <Provider store={store}>
+      <Providers>
         <div>
           <h1 className="text-red-950 text-center">
             Tokyo Sento Review Kuchikomi Site
@@ -35,7 +36,7 @@ export default function Home() {
           </p>
         </div>
         <SearchKu />
-      </Provider>
+      </Providers>
     </div>
   );
 }
