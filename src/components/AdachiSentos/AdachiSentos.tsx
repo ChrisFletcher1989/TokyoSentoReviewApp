@@ -1,8 +1,6 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import store from "../../app/redux/store";
 import { addSentos } from "../../app/redux/features/searchResults";
-import { adachiReducer } from "../../app/redux/features/区s/adachi";
 import type { RootState } from "../../app/redux/store";
 
 const adachiDB = [
@@ -23,13 +21,14 @@ const adachiDB = [
 function AdachiSentos() {
   const dispatch = useDispatch();
   const isAdachiSelected = useSelector((state: RootState) => state.adachi);
+  const searchResults = useSelector((state: RootState) => state.searchResults);
 
   useEffect(() => {
     if (isAdachiSelected) {
       dispatch(addSentos(adachiDB));
-      console.log("Search results updated:");
+      console.log("Search results updated:", searchResults);
     }
-  }, [isAdachiSelected, dispatch]);
+  }, [isAdachiSelected]);
 
   return null;
 }
