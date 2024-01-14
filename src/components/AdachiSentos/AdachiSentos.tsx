@@ -16,6 +16,15 @@ const adachiDB = [
     station: "5 minutes from Kameari",
     address: "Kameari-3-3-3",
   },
+  {
+    name: "FujinoYu",
+    rating: 3.5,
+    station: "1 minute from Ayase",
+    address: "Ayase-3-31-3",
+  },
+  {
+    name: "empty",
+  },
 ];
 
 function AdachiSentos() {

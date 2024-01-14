@@ -23,7 +23,7 @@ const searchResultsSlice = createSlice({
   initialState: initialState,
   reducers: {
     addSentos: (state, action) => {
-      state.searchResults.push(action.payload);
+      state.searchResults.push(...action.payload);
     },
   },
 });

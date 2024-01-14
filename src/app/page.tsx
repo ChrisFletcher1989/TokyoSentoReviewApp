@@ -1,8 +1,13 @@
 "use client";
 import SearchKu from "../components/searchKu";
+import Intro from "../components/Intro";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import { Providers } from "../app/redux/provider";
+import type { RootState } from "../app/redux/store";
+import { useSelector, useDispatch } from "react-redux";
+import { useState } from "react";
+import SearchResults from "@/components/SearchResults";
 
 //APP SKELETON
 //Add components for each 区 and allow users to selected 区s to search by
@@ -17,26 +22,15 @@ import { Providers } from "../app/redux/provider";
 //Review page diplays a disclaimer page before asking them their score out of 5, and any comments
 
 export default function Home() {
+  const [results, setResults] = useState([]);
+
   return (
-    <div>
-      <Providers>
-        <div>
-          <h1 className="text-red-950 text-center">
-            Tokyo Sento Review Kuchikomi Site
-          </h1>
-          <p>
-            Introductionary text Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
-          </p>
-        </div>
+    <Providers>
+      <div>
+        <Intro />
         <SearchKu />
-      </Providers>
-    </div>
+        <SearchResults />
+      </div>
+    </Providers>
   );
 }
