@@ -4,6 +4,9 @@ import { useSelector, useDispatch } from "react-redux";
 import store from "../app/redux/store";
 import { adachiSelected } from "../app/redux/features/区s/adachi";
 import AdachiSentos from "./AdachiSentos/AdachiSentos";
+import ArakawaSentos from "./ArakawaSentos/ArakawaSentos";
+import { arakawaSelected } from "@/app/redux/features/区s/arakawa";
+
 function SearchKu() {
   const dispatch = useDispatch();
 
@@ -20,7 +23,14 @@ function SearchKu() {
           }}
         ></input>
         <label className="mr-4">Adachi</label>
-        <input type="checkbox" name="arakawa" id="arakawa"></input>
+        <input
+          type="checkbox"
+          name="arakawa"
+          id="arakawa"
+          onChange={() => {
+            dispatch(arakawaSelected());
+          }}
+        ></input>
         <label className="mr-4">Arakawa</label>
         <input type="checkbox" name="bunkyo" id="bunkyo"></input>
         <label className="mr-4">Bunkyo</label>
@@ -66,6 +76,7 @@ function SearchKu() {
         <label className="mr-4">Toshima</label>
       </form>
       <AdachiSentos />
+      <ArakawaSentos />
     </div>
   );
 }
