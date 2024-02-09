@@ -16,6 +16,12 @@ const arakawaDB = [
     station: "9 minutes from Arakawa",
     address: "Arakawa-3-3-3",
   },
+  {
+    name: "Teikoku-yu",
+    rating: 4.0,
+    station: "Nippori",
+    address: "Teikoku-yu",
+  },
 ];
 
 function ArakawaSentos() {
