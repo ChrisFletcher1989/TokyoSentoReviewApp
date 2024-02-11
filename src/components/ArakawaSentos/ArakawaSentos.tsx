@@ -17,10 +17,16 @@ const arakawaDB = [
     address: "Arakawa-3-3-3",
   },
   {
+    name: "how are yuu",
+    rating: 3.7,
+    station: "Nippori",
+    address: "Nippor 4-5-8",
+  },
+  {
     name: "Teikoku-yu",
     rating: 4.0,
     station: "Nippori",
-    address: "Teikoku-yu",
+    address: "Yanaka 1-2-4",
   },
 ];
 
