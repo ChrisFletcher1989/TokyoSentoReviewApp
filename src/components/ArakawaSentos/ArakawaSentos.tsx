@@ -28,6 +28,12 @@ const arakawaDB = [
     station: "Nippori",
     address: "Yanaka 1-2-4",
   },
+  {
+    name: "After-yu",
+    rating: 3.5,
+    station: "Minami-Senju",
+    address: "Minami-Senju 7-2-1",
+  },
 ];
 
 function ArakawaSentos() {
